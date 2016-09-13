@@ -1,10 +1,32 @@
-<div ng-repeat="flower in flowers">
-<div class="panel panel-danger col-md-4" style="max-height: 300px; min-height: 300px">
-<div class="panel-heading">{{flower.title}}</div>
-<div class="panel-body">
-<div>{{flower.category}}</div>
-<h5>{{flower.description}}</h5>
-<h5>${{flower.price}}</h5>
+    <h1 style = "text-align: center; color: firebrick">Holiday Arrangements</h1>
+<div ng-repeat="flower in flowers" ng-if="flower.category === 'holiday' ">
+    <div class="panel panel-danger col-md-4" style="max-height: 300px; min-height: 300px">
+        <div class="panel-heading">{{flower.title}}</div>
+        <div class="panel-body">
+            <!-- <div>{{flower.category}}</div> -->
+            <h5>{{flower.description}}</h5>
+            <h5>${{flower.price}}</h5>
+        </div>
+    </div>
 </div>
+    <h1 style = "text-align: center; color: firebrick">Bereavement Arrangements</h1>
+<div ng-repeat="flower in flowers" ng-if="flower.category === 'bereavement' ">
+    <div class="panel panel-danger col-md-4" style="max-height: 300px; min-height: 300px">
+        <div class="panel-heading">{{flower.title}}</div>
+        <div class="panel-body">
+            <h5>{{flower.description}}</h5>
+            <h5>${{flower.price}}</h5>
+        </div>
+    </div>
 </div>
+     <h1 style = "text-align: center; color: firebrick">Miscellaneous Arrangements</h1>
+<div ng-repeat="flower in flowers" ng-if="flower.category === 'misc' ">
+    <div class="panel panel-danger col-md-4" style="max-height: 300px; min-height: 300px">
+        <div class="panel-heading">{{flower.title}}</div>
+        <div class="panel-body">
+            <h5>{{flower.description}}</h5>
+            <h5>${{flower.price}}</h5>
+        </div>
+    </div>
 </div>
+
